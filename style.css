@@ -1,0 +1,716 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gold;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid gold;
+}
+
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+}
+
+/* STATIC GOLD NAME */
+.name {
+    color: gold;
+    font-weight: bold;
+}
+
+
+/* FIXED TYPING LINE */
+.typing-line {
+    height: 30px;
+    margin: 10px 0;
+    color: #ccc;
+    font-weight: 400;
+}
+
+
+/* TAGLINE */
+#tagline {
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #bbb;
+    font-size: 16px;
+}
+
+
+/* ================= BUTTONS ================= */
+/* ================= PREMIUM BUTTONS ================= */
+
+.btn {
+    padding: 12px 26px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* PRIMARY (FILLED GOLD) */
+.primary {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* HOVER */
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* SECONDARY (OUTLINE) */
+.secondary {
+    border: 2px solid gold;
+    color: gold;
+}
+
+/* HOVER */
+.secondary:hover {
+    background: gold;
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* CLICK EFFECT */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* ================= CURSOR ================= */
+.cursor {
+    color: gold;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .nav-links li {
+        margin-left: 15px;
+    }
+
+    #tagline {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .typing-line {
+        height: 25px;
+    }
+}
+
+/* ================= ABOUT ================= */
+/* ================= ABOUT ================= */
+.about {
+    padding: 100px 80px;
+    background: #111;
+}
+
+/* CONTAINER */
+.about-container {
+    display: flex;
+    align-items: center;   /* vertical alignment fix */
+    justify-content: center;
+    gap: 80px;             /* better spacing */
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* IMAGE */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 280px;
+    border-radius: 12px;
+    border: 2px solid gold;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.about-content {
+    flex: 1;
+}
+
+/* HEADING */
+.about-content h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+/* TEXT (MORE READABLE 🔥) */
+.about-content p {
+    margin-bottom: 18px;
+    color: #ddd;           /* brighter for readability */
+    line-height: 1.8;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* SKILLS */
+.skills {
+    margin-top: 25px;
+}
+
+.skills span {
+    display: inline-block;
+    margin: 6px;
+    padding: 8px 14px;
+    border: 1px solid gold;
+    border-radius: 6px;
+    font-size: 14px;
+    color: gold;
+    transition: 0.3s;
+}
+
+/* subtle hover */
+.skills span:hover {
+    background: gold;
+    color: black;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-image img {
+        width: 220px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* ================= PROJECTS ================= */
+.projects {
+    padding: 120px 100px;
+    background: #0d0d0d;
+}
+
+/* TITLE */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 80px;
+}
+
+/* ROW */
+.project-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 100px;
+}
+
+/* REVERSE */
+.project-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* IMAGE */
+/* IMAGE CONTAINER */
+.project-image {
+    width: 480px;
+}
+
+/* LINK WRAPPER */
+.project-image a {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+
+    /* WHITE FRAME */
+    border: 3px solid #fff;
+
+    /* SHADOW */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+    cursor: pointer; /* 🔥 hand cursor */
+}
+
+/* IMAGE */
+.project-image img {
+    width: 100%;
+    display: block;
+    transition: 0.5s ease;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+/* HOVER EFFECT 🔥 */
+.project-image a:hover img {
+    transform: scale(1.08);
+}
+
+.project-image a:hover .overlay {
+    opacity: 1;
+}
+
+/* HOVER */
+.project-image:hover img {
+    transform: scale(1.08);
+}
+
+.project-image:hover .overlay {
+    opacity: 1;
+}
+
+/* CONTENT */
+.project-content {
+    max-width: 550px;
+}
+
+.project-content h3 {
+    font-size: 26px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.project-content p {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* TECH STACK 🔥 */
+.tech-stack {
+    margin-bottom: 20px;
+}
+
+.tech-stack span {
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+    padding: 6px 12px;
+    border: 1px solid gold;
+    border-radius: 20px;
+    font-size: 13px;
+    color: gold;
+}
+
+/* LINKS */
+.project-links a {
+    text-decoration: none;
+    color: gold;
+    margin-right: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    border-bottom: 1px solid gold;
+}
+
+
+/* ================= RESPONSIVE ================= */
+/* ================= TECH STACK ================= */
+.tech {
+    padding: 100px 80px;
+    background: #111;
+}
+
+/* GRID */
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CATEGORY */
+.tech-category h3 {
+    color: gold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* GRID INSIDE */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* ITEM */
+.tech-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+/* ICON */
+.tech-item i {
+    font-size: 40px;
+    margin-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+/* TEXT */
+.tech-item p {
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.tech-item:hover i {
+    transform: translateY(-5px);
+}
+
+.tech-item:hover p {
+    color: gold;
+}
+
+/* SKILL POPUP */
+.tech-item::after {
+    content: attr(data-skill);
+    position: absolute;
+    bottom: -28px;
+    background: rgba(0,0,0,0.8);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: gold;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: 0.3s ease;
+}
+
+/* SHOW SKILL */
+.tech-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tech-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= CONTACT ================= */
+.contact {
+    padding: 100px 80px;
+    background: #0d0d0d;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* LEFT */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* FORM */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: 1px solid #444;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: gold;
+}
+
+/* TEXTAREA */
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+    background: gold;
+    color: black;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #111;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-content p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ICONS */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.socials a {
+    color: gold;
+    font-size: 26px;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT 🔥 */
+.socials a:hover {
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* OPTIONAL: certificate section spacing tweak */
+.certificates .project-row {
+    margin-bottom: 80px;
+}
+
+/* OPTIONAL: make overlay text more clear */
+.certificates .overlay {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* ================= MARQUEE (GOLD PREMIUM STYLE) ================= */
+.skills-marquee {
+    width: 100%;
+    overflow: hidden;
+
+    /* TWO-TONE BACKGROUND */
+    background: #0d0d0d;
+
+    padding: 35px 0;
+    border-top: 1px solid #0d0d0d;
+    border-bottom: 1px solid #0d0d0d;
+}
+
+/* TRACK */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 22s linear infinite;
+}
+
+/* CONTENT */
+.marquee-content {
+    display: flex;
+    gap: 70px;
+    padding-right: 70px;
+}
+
+/* ITEM */
+.marquee-content span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    /* 🔥 GOLD (DULL NOT BRIGHT) */
+    color: gold;
+
+    letter-spacing: 0.5px;
+}
+
+/* ICON */
+.marquee-content i {
+    font-size: 22px;
+    font-weight: 600;
+
+    /* MATCH TEXT */
+    color: gold
+
+/* ❌ NO HOVER CHANGE */
+}
+
+/* ANIMATION */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
